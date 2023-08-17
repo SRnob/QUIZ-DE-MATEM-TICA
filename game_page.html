@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QUIZ DE MATEMÁTICA</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script src="game_page.js"></script>
+</head>
+<body>
+    <h4 id="player1_name"></h4>     <span id="player1_score"></span>
+    <br>
+    <h4 id="player2_name"></h4>     <span id="player2_score"></span>
+   
+    <div class="container">
+        <center>
+            <h2 style="color: rgb(0, 0, 0);">QUIZ DE MATEMÁTICA!</h2>
+            <h3 id="playerquestion"></h3>
+            <h3 id="playeranswer"></h3>
+            
+    
+    
+            <br>
+            <br>
+    
+            <label>Envie sua Número: <b style="color: red"></b></label>
+            <input type="text" id="word" class="form-control" placeholder="NÚMERO 1"> 
+            
+            <label> <b style="color: red"></b></label>
+            <input type="text" id="word" class="form-control" placeholder="NÚMERO 2"> 
+            <br>
+            <button onclick="send()" class="btn btn-success" style="width: 30%;"¨>Enviar</button>
+        </center>
+    </div>
+</body>
