@@ -1,7 +1,7 @@
-player1name = localStorage.getItem("player1name");
-player2name = localStorage.getItem("player2name");
-player1score = 0;
-player2score = 0;
+player1_name = localStorage.getItem("player1name");
+player2_name = localStorage.getItem("player2name");
+player1_score = 0;
+player2_score = 0;
 questionTurn = "player1";
 answerTurn = "player2";
 
@@ -22,34 +22,32 @@ function send(){
 }
 
 function check(){
-    getAnswer = document.getElementById('inputCheckBox').value;
-    answer = getAnswer.toLowerCase();
-    console.log("resposta = "+ answer);
-    if(answer == word){
+    getAnswer = document.getElementById('input_check_box').value;
+    if(getAnswer == actual_answer){
         if(answerTurn == "player1"){
-            player1score = player1score + 1;
-            document.getElementById("player1score").innerHTML = player1score;
+            player1_score = player1_score + 1;
+            document.getElementById("player1_score").innerHTML = player1_score;
         }
         else{
-            player2score = player2score + 1;
-            document.getElementById("player2score").innerHTML = player2score;
+            player2_score = player2_score + 1;
+            document.getElementById("player2_score").innerHTML = player2_score;
         }
     }
     if(questionTurn == "player1"){
         questionTurn = "player2";
-        document.getElementById("playerquestion").innerHTML = "Turno de pergunta:"+player2name;
+        document.getElementById("playerquestion").innerHTML = "Turno de pergunta:"+player2_name;
     }
     else{
         questionTurn = "player1";
-        document.getElementById("playerquestion").innerHTML = "Turno de pergunta:"+player1name;
+        document.getElementById("playerquestion").innerHTML = "Turno de pergunta:"+player1_name;
     }
     if(answerTurn == "player1"){
         answerTurn = "player2";
-        document.getElementById("playeranswer").innerHTML = "Turno de resposta:"+player2name;
+        document.getElementById("playeranswer").innerHTML = "Turno de resposta:"+player2_name;
     }
     else{
         answerTurn = "player1";
-        document.getElementById("playeranswer").innerHTML = "Turno de resposta:"+player1name;
+        document.getElementById("playeranswer").innerHTML = "Turno de resposta:"+player1_name;
     }
     document.getElementById("output").innerHTML = "";   
 }
