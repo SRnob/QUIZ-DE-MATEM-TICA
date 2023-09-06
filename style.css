@@ -18,14 +18,7 @@ body
 	display: inline-block;
 	margin-left: 20px;
 }
-#word
-{
-	width: 60%;
-}
-#wordDisplay
-{
-	letter-spacing: 5px;
-}
+
 #output
 {
 background: white;
